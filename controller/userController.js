@@ -53,19 +53,15 @@ exports.register = async (req, res) => {
   })
 }
 
+  // to verify email
 
+  exports.verifyEmail = async (req,res)=>{
 
+    //check token
+    const token = await Token.findOne({ token: req.params.token})
 
+    if(!token){
+      return res.status(400).json({error:"Invalid token may have expired"})
+    }
 
-  //to verify email
-
-  // exports.verifyEmail = async (req,res)=>{
-
-  //   //check token
-  //   const token = await Token.findOne({ token: req.params.token})
-
-  //   if(!token){
-  //     return res.status(400).json({error:"Invalid token may have expired"})
-  //   }
-
-  // }
+  }
