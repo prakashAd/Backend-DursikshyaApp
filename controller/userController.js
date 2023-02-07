@@ -41,7 +41,7 @@ exports.register = async (req, res) => {
 
   //send token in email
 
-  const url = `http://localhost:5000/api/verifyEmail/${token.token}`;
+  const url = `http://localhost:9001/home`;
 
   sendEmail({
     from: "noreply@express.com.np",
