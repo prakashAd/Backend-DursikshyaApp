@@ -9,6 +9,10 @@ const alumniSchema = new mongoose.Schema({
     type: String,
     required: ture
   },
+  email:{
+    type: String,
+    required: true
+  },
   yearGraduated: {
     type: String,
   },
