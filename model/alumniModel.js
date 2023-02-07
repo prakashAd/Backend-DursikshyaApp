@@ -9,6 +9,10 @@ const alumniSchema = new mongoose.Schema({
     type: String,
     required: ture
   },
+  age:{
+    type: Number,
+    required: true
+  },
   yearGraduated: {
     type: String,
   },
