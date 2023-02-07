@@ -5,10 +5,6 @@ const alumniSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  phoneNumber:{
-    type: String,
-    required: ture
-  },
   yearGraduated: {
     type: String,
   },
