@@ -59,6 +59,10 @@ userSchema.methods = {
             return ""
         }
 
+    },
+    authenticate: function(password){
+
+        return this.hashed_password === this.encryptPassword(password)
     }
 }
 module.exports = mongoose.model("User",userSchema)
