@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 
 // routes
 const JobRoute = require('./routes/jobRoute')
-const UserRoute = require('./routes/userRoute')
+// const UserRoute = require('./routes/userRoute')
 const AlumniRoute = require('./routes/alumniRoute')
 
 const app = express()
