@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 
 //use routes
 app.use('/api',JobRoute)
-app.use('/api',UserRoute)
+// app.use('/api',UserRoute)
 app.use('/api',AlumniRoute)
 
 
