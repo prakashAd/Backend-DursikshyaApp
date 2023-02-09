@@ -62,16 +62,3 @@ exports.updateJob = async (req,res)=>{
 }
 
 
-// delete product
-
-exports.deleteProduct = (req,res)=>{
-
-    Product.findByIdAndDelete(req.params.id,(request,data)=>{
-
-    if(!data){
-        return res.status(400).json({error:"Product not found"})
-    }
-res.send({msg:"Product deleted succesfully"})
-})
-}
-
