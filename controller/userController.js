@@ -8,7 +8,7 @@ const {expressjwt} = require("express-jwt");
 //register new user
 
 exports.register = async (req, res) => {
-  const { username, email, password,coursecompleted,yeargraduated } = req.body; //destructuring
+  const { username, email, password,coursecompleted,yeargraduated,gender } = req.body; //destructuring
 
   //check if email already registered
   const user = await User.findOne({ email: email });
@@ -48,7 +48,8 @@ exports.register = async (req, res) => {
 
   //send token in email
 
-  const url = `http://localhost:5000/api/verifyemail/${token.token}`;
+  // const url = `http://localhost:5000/api/verifyemail/${token.token}`;
+  const url = `${process.env.FRONTEND_URL}/verifyemail/${token.token}`;
 
   sendEmail({
     from: "noreply@express.com.np",
